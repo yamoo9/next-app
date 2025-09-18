@@ -25,15 +25,6 @@
   ],
 
   // --------------------------------------------------------------------------
-  // TypeScript Import 관련 설정
-  // --------------------------------------------------------------------------
-
-  // import 경로를 상대경로로 자동 생성
-  "typescript.preferences.importModuleSpecifier": "relative", 
-  // package.json 기반 자동 import 제안
-  "typescript.preferences.includePackageJsonAutoImports": "auto", 
-
-  // --------------------------------------------------------------------------
   // 파일 확장자별 언어 모드 설정
   // --------------------------------------------------------------------------
 
@@ -83,7 +74,23 @@
   // TypeScript 버전 지정 (로컬 node_modules 사용)
   // --------------------------------------------------------------------------
   
+  // TypeScript 언어 서버를 프로젝트의 TypeScript 버전으로 설정
   "typescript.tsdk": "node_modules/typescript/lib",
+  
+  // 이름 변경 시, 별칭(alias) 사용 비활성화
+  "typescript.preferences.useAliasesForRenames": false,
+
+
+  // --------------------------------------------------------------------------
+  // TypeScript Import 관련 설정
+  // --------------------------------------------------------------------------
+
+  // 자동 import 제안 활성화
+  "typescript.suggest.autoImports": true,
+  // import 경로를 상대경로로 자동 생성
+  "typescript.preferences.importModuleSpecifier": "relative", 
+  // package.json 기반 자동 import 제안
+  "typescript.preferences.includePackageJsonAutoImports": "on", 
   
   // --------------------------------------------------------------------------
   // Tailwind CSS 설정

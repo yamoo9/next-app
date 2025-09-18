@@ -2,15 +2,23 @@
   "private": true,
   "type": "module",
   "name": "next-js",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Bun + Next.js 프로젝트 템플릿",
+  "bun-create": {
+    "preinstall": [],
+    "postinstall": [
+      "bunx rimraf -rf .git",
+      "node .restore.mjs"
+    ],
+    "start": "bun run dev"
+  },
   "scripts": {
     "dev": "bun --bun next dev --turbopack",
     "prod": "next build --turbopack",
     "start": "next start",
+    "type-check": "tsc --noEmit",
     "lint": "bun lint:check --fix",
     "lint:check": "eslint . --cache --cache-location ./node_modules/.cache/eslint/.eslintcache",
-    "type-check": "tsc --noEmit",
     "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx,json}\" --cache --list-different --ignore-path .gitignore",
     "format:check": "prettier --check \"src/**/*.{js,jsx,ts,tsx,json}\" --cache --ignore-path .gitignore",
     "clean": "rimraf -rf .next",
@@ -25,11 +33,11 @@
   "dependencies": {
     "@supabase/supabase-js": "^2.57.4",
     "next": "^15.5.3",
-    "plaiceholder": "^3.0.0",
     "react": "^19.1.1",
     "react-dom": "^19.1.1"
   },
   "devDependencies": {
+    "@plaiceholder/next": "^3.0.0",
     "@eslint/js": "^9.35.0",
     "@supabase/ssr": "^0.7.0",
     "@tailwindcss/postcss": "^4.1.13",
