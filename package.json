@@ -8,7 +8,8 @@
     "preinstall": [],
     "postinstall": [
       "bunx rimraf -rf .git",
-      "node .restore.mjs"
+      "node .restore.mjs",
+      "rimraf .restore.mjs"
     ],
     "start": "bun run dev"
   },

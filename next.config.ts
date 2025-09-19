@@ -25,6 +25,11 @@ const nextConfig: NextConfig = {
     // 빌드 시, 타입 검사 결과 무시 설정
     // ignoreBuildErrors: false,
   },
+
+  // Turbopack 설정
+  turbopack: {
+    root: '__dirname',
+  },
 }
 
 export default withPlaiceholder(nextConfig)
