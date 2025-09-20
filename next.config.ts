@@ -18,13 +18,13 @@ const nextConfig: NextConfig = {
   // ESLint 설정
   eslint: {
     // 빌드 시, 린팅 검사 결과 무시 설정
-    // ignoreDuringBuilds: false,
+    // ignoreDuringBuilds: true,
   },
 
   // TypeScript 설정
   typescript: {
     // 빌드 시, 타입 검사 결과 무시 설정
-    // ignoreBuildErrors: false,
+    // ignoreBuildErrors: true,
   },
 
   // Turbopack 설정
