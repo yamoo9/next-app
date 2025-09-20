@@ -1,6 +1,5 @@
 import { dirname } from 'node:path'
 import { fileURLToPath } from 'node:url'
-
 import { FlatCompat } from '@eslint/eslintrc'
 import tseslint from '@typescript-eslint/eslint-plugin'
 import tsparser from '@typescript-eslint/parser'
@@ -70,41 +69,56 @@ const eslintConfig = [
       // Prettier 통합
       'prettier/prettier': 'error',
 
-      // import 순서 규칙
+      // import 순서 관련 규칙
       'import/order': [
         'error',
         {
+          // import 그룹 순서 정의
           groups: [
-            'builtin', // Node.js 내장 모듈
-            'external', // npm 패키지
-            'internal', // 프로젝트 내부 경로 별칭
-            'parent', // 상위 디렉토리
-            'sibling', // 같은 디렉토리
-            'index', // 현재 디렉토리
-            'object', // 객체 import
-            'type', // 타입 import
+            'builtin', // Node.js 내장 모듈 (fs, path 등)
+            'external', // npm 패키지 (react, next, lodash 등)
+            'internal', // 프로젝트 내부 경로 별칭 (@/components 등)
+            'parent', // 상위 디렉토리 (../components 등)
+            'sibling', // 같은 디렉토리 (./Button 등)
+            'index', // 현재 디렉토리 (. 또는 ./ 등)
+            'object', // 객체 import (import * as name from 'module')
+            'type', // 타입 import (import type { Type } from 'module')
           ],
-          'newlines-between': 'always',
+          // 그룹 간 빈 줄 추가
+          'newlines-between': 'never',
+          // 알파벳 순 정렬 설정
           alphabetize: {
-            order: 'asc',
-            caseInsensitive: true,
+            order: 'asc', // 오름차순 정렬
+            caseInsensitive: true, // 대소문자 구분 안 함
           },
+          // 특정 패턴에 대한 그룹 및 위치 지정
           pathGroups: [
+            // react와 next를 external 그룹 최상단에 배치
             {
               pattern: 'react',
               group: 'external',
               position: 'before',
             },
             {
+              pattern: 'next',
+              group: 'external',
+              position: 'before',
+            },
+            // 프로젝트 내부 경로 별칭(@로 시작하는 import)
+            {
               pattern: '@/**',
               group: 'internal',
             },
           ],
+          // 특정 import 타입을 pathGroups 규칙에서 제외
           pathGroupsExcludedImportTypes: ['react'],
         },
       ],
+      // import 문은 파일 최상단에 위치해야 함
       'import/first': 'error',
+      // 중복 import 금지
       'import/no-duplicates': 'error',
+      // 변경 가능한 export 금지 (let, var로 선언된 변수 export 금지)
       'import/no-mutable-exports': 'error',
     },
   },

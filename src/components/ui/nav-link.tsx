@@ -1,10 +1,8 @@
 'use client'
 
 import type { ComponentProps, ReactNode } from 'react'
-
 import { clsx } from 'clsx'
 import { usePathname } from 'next/navigation'
-
 import Link from './link'
 
 /**

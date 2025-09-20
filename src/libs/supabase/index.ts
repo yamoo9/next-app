@@ -1,5 +1,4 @@
 import { cookies } from 'next/headers'
-
 import { createClient } from './server'
 
 const cookieStore = await cookies()

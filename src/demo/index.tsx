@@ -1,7 +1,6 @@
 'use client'
 
 import { useEffect, useRef, useState } from 'react'
-
 import Logo from './logo'
 import Output from './output'
 import Shortcut from './shortcut'

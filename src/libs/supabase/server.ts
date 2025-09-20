@@ -1,7 +1,5 @@
 import { createServerClient } from '@supabase/ssr'
-
 import supabaseInfo from './info'
-
 import type { Database } from './database.types'
 import type { ReadonlyRequestCookies } from 'next/dist/server/web/spec-extension/adapters/request-cookies'
 import type { cookies } from 'next/headers'

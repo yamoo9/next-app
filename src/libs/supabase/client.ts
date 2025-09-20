@@ -1,7 +1,5 @@
 import { createBrowserClient } from '@supabase/ssr'
-
 import supabaseInfo from './info'
-
 import type { Database } from './database.types'
 
 const { supabaseKey, supabaseUrl } = supabaseInfo

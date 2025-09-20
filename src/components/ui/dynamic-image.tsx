@@ -1,5 +1,4 @@
 import Image, { type ImageProps } from 'next/image'
-
 import { getImage, tw } from '@/utils'
 
 /**

@@ -1,7 +1,5 @@
 import type { PropsWithChildren } from 'react'
-
 import type { Metadata } from 'next'
-
 import '@/styles/main.css'
 
 export const metadata: Metadata = {

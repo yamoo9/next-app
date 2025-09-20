@@ -1,6 +1,5 @@
-import withPlaiceholder from '@plaiceholder/next'
-
 import type { NextConfig } from 'next'
+import withPlaiceholder from '@plaiceholder/next'
 
 const nextConfig: NextConfig = {
   // 리액트 엄격 모드 활성화

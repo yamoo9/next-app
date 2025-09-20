@@ -5,8 +5,8 @@
 
   "editor.defaultFormatter": "esbenp.prettier-vscode", // 기본 포맷터 설정
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": "explicit", // 저장 시 ESLint 자동 수정
-    "source.organizeImports": "explicit" // 저장 시 import 정리
+    "source.fixAll.eslint": "always", // 저장 시 ESLint 자동 수정
+    "source.organizeImports": "never" // 저장 시 import 정리
   },
 
   // --------------------------------------------------------------------------

@@ -1,7 +1,6 @@
+import type { Metadata } from 'next'
 import { LearnSection } from '@/components'
 import RandomCountUp from '@/demo'
-
-import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Next.js 프로젝트 템플릿',
