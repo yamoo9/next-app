@@ -1,4 +1,5 @@
 import withPlaiceholder from '@plaiceholder/next'
+
 import type { NextConfig } from 'next'
 
 const nextConfig: NextConfig = {
@@ -19,7 +20,7 @@ const nextConfig: NextConfig = {
     // 빌드 시, 린팅 검사 결과 무시 설정
     // ignoreDuringBuilds: false,
   },
-  
+
   // TypeScript 설정
   typescript: {
     // 빌드 시, 타입 검사 결과 무시 설정
@@ -27,9 +28,7 @@ const nextConfig: NextConfig = {
   },
 
   // Turbopack 설정
-  turbopack: {
-    root: '__dirname',
-  },
+  turbopack: {},
 }
 
 export default withPlaiceholder(nextConfig)

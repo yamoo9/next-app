@@ -1,6 +1,8 @@
-import '@/styles/main.css'
-import { Metadata } from 'next'
 import type { PropsWithChildren } from 'react'
+
+import type { Metadata } from 'next'
+
+import '@/styles/main.css'
 
 export const metadata: Metadata = {
   title: 'Next.js 프로젝트 템플릿',

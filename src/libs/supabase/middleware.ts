@@ -1,6 +1,8 @@
 import { createServerClient } from '@supabase/ssr'
 import { type NextRequest, NextResponse } from 'next/server'
+
 import supabaseInfo from './info'
+
 import type { Database } from './database.types'
 
 const { supabaseKey, supabaseUrl } = supabaseInfo

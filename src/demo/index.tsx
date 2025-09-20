@@ -1,11 +1,13 @@
 'use client'
 
 import { useEffect, useRef, useState } from 'react'
+
 import Logo from './logo'
 import Output from './output'
 import Shortcut from './shortcut'
-import './style.css'
 import { getRandomCount, setAppColor, setDocumentTitle } from './utils'
+
+import './style.css'
 
 const MIN = 50
 const MAX = 90
