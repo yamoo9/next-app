@@ -2,12 +2,30 @@ import Image, { type ImageProps } from 'next/image'
 
 import { getImage, tw } from '@/utils'
 
-type Props = Omit<ImageProps, 'src' | 'alt'> & {
-  src: string
-  alt: string
-  className?: string
-}
-
+/**
+ * 동적 이미지 로드 컴포넌트
+ *
+ * @example
+ * ```tsx
+ * // 기본 사용법
+ * <DynamicImage src="/images/example.jpg" alt="Example image" />
+ *
+ * // 클래스 추가
+ * <DynamicImage
+ *   src="/images/example.jpg"
+ *   alt="Example image"
+ *   className="rounded-lg shadow-md"
+ * />
+ *
+ * // Next/Image 속성 추가
+ * <DynamicImage
+ *   src="/images/example.jpg"
+ *   alt="Example image"
+ *   priority
+ *   quality={90}
+ * />
+ * ```
+ */
 export default async function DynamicImage({
   src,
   alt,
@@ -28,4 +46,10 @@ export default async function DynamicImage({
       />
     </div>
   )
+}
+
+type Props = Omit<ImageProps, 'src' | 'alt'> & {
+  src: string
+  alt: string
+  className?: string
 }
