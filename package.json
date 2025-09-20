@@ -16,7 +16,7 @@
   "scripts": {
     "dev": "bun --bun next dev --turbopack",
     "prod": "cross-env NODE_ENV=production next build --turbopack",
-    "start": "next start",
+    "start": "next start -p 3001",
     "type-check": "tsc --noEmit",
     "lint": "bun lint:check --fix",
     "lint:check": "cross-env NODE_ENV=development eslint . --cache --cache-location ./node_modules/.cache/eslint/.eslintcache",
