@@ -1,7 +1,7 @@
 export default function Logo() {
   return (
     <svg
-      className="fixed top-[var(--top,7dvh)] w-[var(--size,5dvh)] h-[var(--size,5dvh)] left-2/4 animate-[rotate_20s_linear_infinite]"
+      className="fixed top-[var(--top,7dvh)] w-[var(--size,5dvh)] h-[var(--size,5dvh)] left-1/2 -translate-x-1/2 animate-[rotate_20s_linear_infinite]"
       aria-label="리액트"
       viewBox="0 0 21 21"
       fill="none"
